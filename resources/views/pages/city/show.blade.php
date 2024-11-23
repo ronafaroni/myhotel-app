@@ -40,7 +40,7 @@
                         <div class="flex items-center gap-[6px]">
                             <img src="{{ asset('assets/images/icons/location.svg') }}" class="w-5 h-5 flex shrink-0"
                                 alt="icon">
-                            <p class="text-sm text-ngekos-grey">in {{ $item->city->name }}</p>
+                            <p class="text-sm text-ngekos-grey">Kota {{ $item->city->name }}</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <img src="{{ asset('assets/images/icons/profile-2user.svg') }}" class="w-5 h-5 flex shrink-0"
@@ -57,4 +57,6 @@
         @endforeach
 
     </section>
+
+    @include('includes.navigation')
 @endsection

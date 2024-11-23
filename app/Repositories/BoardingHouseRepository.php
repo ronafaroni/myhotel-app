@@ -63,4 +63,12 @@ class BoardingHouseRepository implements BoardingHouseRepositoryInterface
     {
         return Room::find($id);
     }
+
+    public function getHotelByNameCityCategory($name, $city_id, $category_id)
+    {
+        return BoardingHouse::where('name', 'LIKE', '%' . $name . '%')
+            ->where('city_id', $city_id)
+            ->where('category_id', $category_id)
+            ->get();
+    }
 }

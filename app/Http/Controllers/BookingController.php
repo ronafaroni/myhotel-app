@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BookingShowRequest;
 use App\Interfaces\BoardingHouseRepositoryInterface;
 use App\Interfaces\TransactionRepositoryInterface;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Requests\CustomerInformationStoreRequest;
-
+use App\Http\Requests\BookingShowRequest;
 
 class BookingController extends Controller
 {

@@ -21,9 +21,11 @@ Route::get('/check-booking', [BookingController::class, 'checkBooking'])->name('
 Route::get('/boarding-house/booking/{slug}', [BookingController::class, 'booking'])->name('booking');
 Route::get('/boarding-house/booking/{slug}/information', [BookingController::class, 'information'])->name('booking.information');
 Route::post('/boarding-house/booking/{slug}/information/save', [BookingController::class, 'saveInformation'])->name('booking.information.save');
+Route::post('/search', [BookingController::class, 'find'])->name('boarding-house.find');
 
 Route::get('/boarding-house/booking/{slug}/checkout', [BookingController::class, 'checkout'])->name('booking.checkout');
 Route::post('/boarding-house/booking/{slug}/payment', [BookingController::class, 'payment'])->name('booking.payment');
 Route::get('/booking-success', [BookingController::class, 'success'])->name('booking.success');
 
 Route::post('check-booking', [BookingController::class, 'show'])->name('check-booking.show');
+Route::post('check-hotel', [BoardingHouseController::class, 'search'])->name('boarding-house.search');
